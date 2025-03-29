@@ -10,25 +10,29 @@ class EventItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     
-    return Column(
-      children: [
-        Container(
-          height: 146,
-          width: 120,
-          margin: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: 8),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            height: 146,
+            width: 120,
+            clipBehavior: Clip.hardEdge,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Image.asset("assets/images/${event.imgName}", fit: BoxFit.cover),
           ),
-          child: Image.asset(event.imgName),
-        ),
-        Text(event.title),
-        Row(
-          children: [
-            Icon(Icons.star, color: Colors.yellow,),
-            Text(event.rate.toString()),
-          ],
-        ),
-      ],
+          Text(event.title),
+          Row(
+            children: [
+              Icon(Icons.star, color: Colors.yellow,),
+              Text(event.rate.toString()),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
