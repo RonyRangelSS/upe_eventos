@@ -6,28 +6,27 @@ class EventItem extends StatelessWidget {
 
   const EventItem({super.key, required this.event});
 
-
   @override
   Widget build(BuildContext context) {
-    
-    return Container(
+    return Card(
       margin: EdgeInsets.symmetric(horizontal: 8),
+      
+      clipBehavior: Clip.hardEdge,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        spacing: 4,
         children: [
-          Container(
-            height: 146,
+          Image.asset(
+            "assets/images/${event.imgName}",
+            height: 140,
             width: 120,
-            clipBehavior: Clip.hardEdge,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: Image.asset("assets/images/${event.imgName}", fit: BoxFit.cover),
+            fit: BoxFit.cover,
+
           ),
           Text(event.title),
           Row(
             children: [
-              Icon(Icons.star, color: Colors.yellow,),
+              Icon(Icons.star, color: Colors.yellow),
               Text(event.rate.toString()),
             ],
           ),

@@ -11,10 +11,11 @@ class CategoryRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(color: Colors.white),
+      width: double.infinity,
+      padding: EdgeInsets.symmetric(horizontal: 18 ,vertical: 22),
       child: ListView.builder(
             itemCount: categoryList.length,
             scrollDirection: Axis.horizontal,
-            padding: EdgeInsets.all(10),
             itemBuilder:
                 (ctx, index) => CategoryItem(category: categoryList[index])
       ),
