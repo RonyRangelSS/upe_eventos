@@ -10,5 +10,5 @@ Instalar os seguintes packages para permitir o funcionamento da aplicação:
 
 Utilizar os seguintes comandos no terminal:
 
-flutter pub add google_fonts
-flutter pub add transparent_image
+- flutter pub add google_fonts
+- flutter pub add transparent_image
