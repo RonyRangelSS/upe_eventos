@@ -83,8 +83,8 @@ class HomeScreen extends StatelessWidget {
                 style: GoogleFonts.nunito(fontSize: 28, fontWeight: FontWeight.w500,),
               ),
             ),
-            SizedBox(height: 200, child: EventRow(eventList: eventList)),
-            SizedBox(height: 20),
+            SizedBox(height: 220, child: EventRow(eventList: eventList)),
+            SizedBox(height: 10),
             Container(
               alignment: Alignment.bottomLeft,
               padding: EdgeInsets.symmetric(horizontal: 8),

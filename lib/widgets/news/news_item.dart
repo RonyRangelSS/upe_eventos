@@ -12,7 +12,7 @@ class NewsItem extends StatelessWidget {
     return Card(
       elevation: 2,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-      margin: EdgeInsets.all(8),
+      margin: EdgeInsets.all(6),
       clipBehavior: Clip.hardEdge,
       child: Stack(
         children: [
@@ -20,14 +20,15 @@ class NewsItem extends StatelessWidget {
             placeholder: MemoryImage(kTransparentImage),
             image: AssetImage("assets/images/${news.imgName}"),
             fit: BoxFit.cover,
-            width: 200,
-            height: 140,
+            width: 125,
+            height: double.infinity,
           ),
           Positioned(
             bottom: 0,
             left: 0,
             right: 0,
             child: Container(
+              height: 32,
               decoration: BoxDecoration(color: Colors.black54),
               child: Text(
                 news.label,
